@@ -12,7 +12,9 @@ git commit -m 'initial commit'
 
 ```
 go to github, click new repository, create
-git remote add origin git@github.com
+git remote add origin https://github.com/angelahe/automate.git
+git push -u origin master
+
 ## setup
 
 ```bash
