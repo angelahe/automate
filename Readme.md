@@ -53,3 +53,7 @@ pip install --user pyautogui
 errors in pip list install :
 ERROR: pyobjc-framework-cocoa 6.1 has requirement pyobjc-core>=6.1, but you'll have pyobjc-core 5.2 which is incompatible.
 ERROR: pyobjc 5.2 has requirement pyobjc-framework-Cocoa==5.2, but you'll have pyobjc-framework-cocoa 6.1 which is incompatible.
+
+#advanced sys 
+look for path
+add to paths (need to find my bash profile file)

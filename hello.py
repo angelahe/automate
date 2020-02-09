@@ -18,3 +18,5 @@ name = 'Bob'
 if name == 'Alice':
     print('Hi Alice')
 
+#add command line options
+#

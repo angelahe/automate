@@ -95,9 +95,9 @@ cheese = spam #copies reference to spam, changes to cheese will change spam as a
 cheesy = copy.deepcopy(spam)
 
 #line continuation
-    spam = ['apples',
+spam = ['apples',
             'oranges',
             'lemons']
 
-    money = print('four score and seven ' + \
-                  'years ago')
+money = print('four score and seven ' + \
+                  'years ago' + spam[0])
