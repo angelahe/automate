@@ -1,0 +1,12 @@
+#secret file
+.env
+
+# editor files
+.idea/*
+
+dist/
+build/
+*.egg-info/
+
+# Mac
+**/.DS_Store
