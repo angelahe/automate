@@ -99,5 +99,5 @@ spam = ['apples',
             'oranges',
             'lemons']
 
-money = print('four score and seven ' + \
+print ('four score and seven ' + \
                   'years ago' + spam[0])
