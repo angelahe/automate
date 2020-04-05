@@ -3,6 +3,9 @@
 to practice making and setting up python tools for automation
 https://nostarch.com/automatestuffresources
 
+current status: 
+http://automatetheboringstuff.com/2e/chapter7/
+file in progress: regex.py
 ## set up git repo
 inside new folder with code
 ```
@@ -95,3 +98,9 @@ d$ cut to end of line
 x - delete
 > shift text right
 < shift text left
+
+git
+.gitignore
+https://www.pluralsight.com/guides/how-to-use-gitignore-file
+
+git rm --cached filename

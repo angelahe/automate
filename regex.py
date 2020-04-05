@@ -52,7 +52,22 @@ batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
 mo4 = batRegex.search('Batmobile lost a wheel')
 mo4.group() #will print Batmobile
 mo5 = batRegex.search('Batmotorcycle lost a wheel')
-mo5.group() #will give nonetype obj has no attribute
+# mo5.group() #will give nonetype obj has no attribute
 print('pattern matched was '+ mo4.group(1)) #to find which suffix was found
 
-#optional matching with question mark
+#optional matching with question mark eg (wo)?
+batRegex2 = re.compile(r'Bat(wo)?man')
+ba1 = batRegex2.search('The Adventures of Batman')
+print('found '+ ba1.group())
+ba2 = batRegex2.search('The Adventures of Batwoman')
+print('found '+ ba2.group())
+
+#optional area code then is...
+phoneRegex4 = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
+mo6 = phoneRegex4.search('my number is 402-333-1212')
+print('found phone # ' + mo6.group())
+mo7 = phoneRegex4.search('her number is 555-5555')
+print('found # without code ' + mo7.group())
+
+
+
