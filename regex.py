@@ -69,5 +69,13 @@ print('found phone # ' + mo6.group())
 mo7 = phoneRegex4.search('her number is 555-5555')
 print('found # without code ' + mo7.group())
 
+# match zero or more with *
+batRegex3 = re.compile(r'Bat(wo)*man')
+mo8 = batRegex3.search('The Adventures of Batman')
+print('found batman: ' + mo8.group())
+mo9 = batRegex3.search('The Adventures of Batwoman')
+print('found batwoman: ' + mo9.group())
+mo10 = batRegex3.search('The Adventures of Batwowowowoman')
+print('finds 1+ wo strings: ' + mo10.group())
 
 
