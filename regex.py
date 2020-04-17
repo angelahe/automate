@@ -78,4 +78,10 @@ print('found batwoman: ' + mo9.group())
 mo10 = batRegex3.search('The Adventures of Batwowowowoman')
 print('finds 1+ wo strings: ' + mo10.group())
 
+# matching specific repetitions with braces e.g. (Ha){3}
+# range of repetitions (Ha){3,5} will match 3-5 reps of Ha
+haRegex = re.compile(r'(Ha){3}')
+ha1 = haRegex.search('she said HaHaHa')
+print('found Ha x 3 pattern: ' + ha1.group())
+
 
