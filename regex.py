@@ -84,4 +84,23 @@ haRegex = re.compile(r'(Ha){3}')
 ha1 = haRegex.search('she said HaHaHa')
 print('found Ha x 3 pattern: ' + ha1.group())
 
+# greedy and non greedy matching - greedy by default
+# non greedy has ? after it
+haString = 'HaHaHaHaHaHaHa'
+greedyHaRegex = re.compile(r'(Ha){3,5}')
+ha2 = greedyHaRegex.search(haString)
+print('Ha x 5 found greedy: ', ha2.group())
+nongreedyHaRegex = re.compile(r'(Ha){3,5}?')
+ha3 = nongreedyHaRegex.search(haString)
+print('Ha x 3 found non-greedy: ', ha3.group())
 
+#findall method returns list of strings
+phoneNumRegex4 = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+phoneString = 'Cell:403-333-2929 Work: 212-555-1010'
+foundStrings = phoneNumRegex4.findall(phoneString)
+print('finds 2 phone nums and puts in list')
+print(*foundStrings, sep = ", ")
+# or could print with newline:
+# print(*foundStrings, sep = "\n")
+# or can use map to convert item to string and then join them
+# print(' '.join(map(str, foundStrings)))

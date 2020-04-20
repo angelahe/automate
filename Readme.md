@@ -104,3 +104,6 @@ git
 https://www.pluralsight.com/guides/how-to-use-gitignore-file
 
 git rm --cached filename
+
+useful links:
+https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
