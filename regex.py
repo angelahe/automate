@@ -104,3 +104,23 @@ print(*foundStrings, sep = ", ")
 # print(*foundStrings, sep = "\n")
 # or can use map to convert item to string and then join them
 # print(' '.join(map(str, foundStrings)))
+
+# character classes
+# matches text with 1+ numeric digits then whitespace then letter/digit/_ chars
+xmasRegex = re.compile(r'\d+\s\w+')
+print(*xmasRegex.findall('12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 \
+swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge'), sep = ', ')
+
+# define own character classes with []
+# this eg matches any vowel, lower/uppercase
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+print('vowels found: ')
+print(*vowelRegex.findall('RoboCop eats baby food. BABY FOOD.'), sep = ' ')
+
+# can define ranges with hyphen
+# [a-zA-Z0-9]
+
+# can define negative character class with ^
+consonantRegex = re.compile(r'[^aeiouAEIOU]')
+print('all consonants in the string: ')
+print(*consonantRegex.findall('RoboCop eats baby food. BABY FOOD.'), sep = '')

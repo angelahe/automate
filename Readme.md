@@ -107,3 +107,11 @@ git rm --cached filename
 
 useful links:
 https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
+
+\d - 0-9
+\D - not 0-9
+\w - a-z, 0-9, _
+\W - not a-z, 0-9, _
+\s - space, tab, newline
+\S - not space, tab, newline
+[a-zA-Z0-9] - matches all lower/uppercase letters and numbers
