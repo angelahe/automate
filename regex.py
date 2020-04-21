@@ -124,3 +124,30 @@ print(*vowelRegex.findall('RoboCop eats baby food. BABY FOOD.'), sep = ' ')
 consonantRegex = re.compile(r'[^aeiouAEIOU]')
 print('all consonants in the string: ')
 print(*consonantRegex.findall('RoboCop eats baby food. BABY FOOD.'), sep = '')
+
+# ^ and $ character classes for starts with, ends with, and exactly this
+beginsWithHello = re.compile(r'^Hello')
+print('search result for begins with hello: ')
+print(beginsWithHello.search('Hello, world!'))
+
+endsWithNumber = re.compile(r'\d$')
+print('search result for ending with number: ')
+print(endsWithNumber.search('Your number is 42'))
+
+# begins and ends with number, ie entire regex must match the regex
+wholeStringIsNum = re.compile(r'^\d+$')
+print('whole string is a number')
+print(wholeStringIsNum.search('1234567890'))
+
+# wildcard . matches all but newline
+atRegex = re.compile(r'.at')
+print('all matches to strings with *at: ')
+print(*atRegex.findall('The cat in the hat sat on the flat mat.'), sep = ' ')
+
+# match with .*
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
+mo = nameRegex.search('First Name: Al Last Name: Sweigart')
+print('first name is ' + mo.group(1))
+print('last name is ' + mo.group(2))
+
+# greedy vs non greedy match with .*

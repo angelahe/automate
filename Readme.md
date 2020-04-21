@@ -115,3 +115,4 @@ https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 \s - space, tab, newline
 \S - not space, tab, newline
 [a-zA-Z0-9] - matches all lower/uppercase letters and numbers
+\. match .
