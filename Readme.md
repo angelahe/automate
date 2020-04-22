@@ -53,6 +53,8 @@ pip install --user pyobjc==5.2 (on macOS only)
 pip install --user python3-xlib==0.15 (on Linux only)
 pip install --user pyautogui
 ```
+other installs:
+pip install --user pyperclip
 errors in pip list install :
 ERROR: pyobjc-framework-cocoa 6.1 has requirement pyobjc-core>=6.1, but you'll have pyobjc-core 5.2 which is incompatible.
 ERROR: pyobjc 5.2 has requirement pyobjc-framework-Cocoa==5.2, but you'll have pyobjc-framework-cocoa 6.1 which is incompatible.
