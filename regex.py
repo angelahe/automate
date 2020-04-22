@@ -151,3 +151,53 @@ print('first name is ' + mo.group(1))
 print('last name is ' + mo.group(2))
 
 # greedy vs non greedy match with .*
+nongreedyRegex = re.compile(r'<.*?>')
+minMatch = nongreedyRegex.search('<To serve man> for dinner.>')
+print('non greedy match')
+print(minMatch.group())
+
+greedyRegex = re.compile(r'<.*>')
+maxMatch = greedyRegex.search('<To serve man> for dinner.>')
+print('greedy match')
+print(maxMatch.group())
+
+# match newlines with dot character DOTALL to match all chars incl newlines
+noNewlineRegex = re.compile('.*')
+print('matches up to the first newline: ')
+print(noNewlineRegex.search('Serve the public trust.\nProtect the innocent. \
+\nUphold the law.').group())
+
+newlineRegex = re.compile('.*', re.DOTALL)
+print('matches with all newlines: ')
+print(newlineRegex.search('Serve the public trust.\nProtect the innocent. \
+\nUphold the law.').group())
+
+# case insensitive matching with re.IGNORECASE or re.I argument
+robocop = re.compile(r'robocop', re.I)
+print('case insensitive matching: ')
+print(robocop.search('RoboCop is part man, part machine, all cop.').group())
+print(robocop.search('ROBOCOP protects the innocent.').group())
+
+# substitute strings with sub method
+namesRegex = re.compile(r'Agent \w+')
+print('substitutions applied: ')
+print(namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.'))
+
+# substitute but show first letter of matched
+agentNamesRegex = re.compile(r'Agent (\w)\w*')
+print('substitute *** except 1st letter of matched string')
+print(agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent \
+Eve knew Agent Bob was a double agent.'))
+
+# ignoring whitespace and comments in regex
+phoneRegexComplex = re.compile(r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}\
+(\s*(ext|x|ext.)\s*\d{2,5})?)')
+# spread regex over multiple lines
+phoneRegexComplex2 = re.compile(r'''(
+    (\d{3}|\(\d{3}\))?            # area code
+    (\s|-|\.)?                    # separator
+    \d{3}                         # first 3 digits
+    (\s|-|\.)                     # separator
+    \d{4}                         # last 4 digits
+    (\s*(ext|x|ext.)\s*\d{2,5})?  # extension
+    )''', re.VERBOSE)

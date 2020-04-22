@@ -108,11 +108,30 @@ git rm --cached filename
 useful links:
 https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 
+Regex summary:
 \d - 0-9
 \D - not 0-9
 \w - a-z, 0-9, _
 \W - not a-z, 0-9, _
 \s - space, tab, newline
 \S - not space, tab, newline
+need to escape: \.  \^  \$  \*  \+  \?  \{  \}  \[  \]  \\  \|  \(  \)
 [a-zA-Z0-9] - matches all lower/uppercase letters and numbers
 \. match .
+The | matches one of many expressions
+The ? matches zero or one of the preceding group.
+The * matches zero or more of the preceding group.
+The + matches one or more of the preceding group.
+The {n} matches exactly n of the preceding group.
+The {n,} matches n or more of the preceding group.
+The {,m} matches 0 to m of the preceding group.
+The {n,m} matches at least n and at most m of the preceding group.
+{n,m}? or *? or +? performs a non-greedy match of the preceding group.
+^spam means the string must begin with spam.
+spam$ means the string must end with spam.
+The . matches any character, except newline characters.
+\d, \w, and \s match a digit, word, or space character, respectively.
+\D, \W, and \S match anything except a digit, word, or space character, respectively.
+[abc] matches any character between the brackets (such as a, b, or c).
+[^abc] matches any character that isn’t between the brackets.
+() in regex demarks the match groups for mo.group(), mo.group(0), mo.group(1)
