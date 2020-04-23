@@ -4,8 +4,9 @@ to practice making and setting up python tools for automation
 https://nostarch.com/automatestuffresources
 
 current status: 
-http://automatetheboringstuff.com/2e/chapter7/
-file in progress: regex.py
+http://automatetheboringstuff.com/2e/chapter8/
+file in progress: validate.py
+
 ## set up git repo
 inside new folder with code
 ```
@@ -53,18 +54,20 @@ pip install --user pyobjc==5.2 (on macOS only)
 pip install --user python3-xlib==0.15 (on Linux only)
 pip install --user pyautogui
 ```
-other installs:
+## other installs:
 pip install --user pyperclip
-errors in pip list install :
+pip install pyinputplus
+
+## errors in pip list install :
 ERROR: pyobjc-framework-cocoa 6.1 has requirement pyobjc-core>=6.1, but you'll have pyobjc-core 5.2 which is incompatible.
 ERROR: pyobjc 5.2 has requirement pyobjc-framework-Cocoa==5.2, but you'll have pyobjc-framework-cocoa 6.1 which is incompatible.
 
-#advanced sys 
+## advanced sys 
 look for path
 add to paths (need to find my bash profile file)
 
 #vim 
-#vim reminders
+## vim reminders
 https://vim.rtorr.com/
 move: eg 4 j go down 4 lines
 h j k l
@@ -110,7 +113,7 @@ git rm --cached filename
 useful links:
 https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 
-Regex summary:
+## Regex summary:
 \d - 0-9
 \D - not 0-9
 \w - a-z, 0-9, _
@@ -142,3 +145,34 @@ regex.sub - substitute regex
 re.IGNORECASE, re.I - case insensitive
 re.DOTALL - matches even newlines
 (r'.at') matches all but newline
+
+## pyinputplus library:
+https://pyinputplus.readthedocs.io/.
+help(pyip.inputChoice)
+
+inputStr() Is like the built-in input() function but has the general PyInputPlus features. 
+    You can also pass a custom validation function to it
+
+inputNum() Ensures the user enters a number and returns an int or float, depending on if 
+    the number has a decimal point in it
+
+inputChoice() Ensures the user enters one of the provided choices
+
+inputMenu() Is similar to inputChoice(), but provides a menu with numbered or lettered options
+
+inputDatetime() Ensures the user enters a date and time
+
+inputYesNo() Ensures the user enters a “yes” or “no” response
+
+inputBool() Is similar to inputYesNo(), but takes a “True” or “False” response and 
+    returns a Boolean value
+
+inputEmail() Ensures the user enters a valid email address
+
+inputFilepath() Ensures the user enters a valid file path and filename, 
+    and can optionally check that a file with that name exists
+
+inputPassword() Is like the built-in input(), but displays * characters as the user types 
+    so that passwords, or other sensitive information, aren’t displayed on the screen
+    
+args: min, max, lessThan, greaterThan, blank
