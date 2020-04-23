@@ -87,7 +87,7 @@ I - at beginning of line
 a - after cursor
 A - end of line
 o - append new line below current
-O - apprend above current line
+O - append above current line
 
 cut/paste:
 yy - copy line (2yy for 2 lines)
@@ -137,3 +137,8 @@ The . matches any character, except newline characters.
 [abc] matches any character between the brackets (such as a, b, or c).
 [^abc] matches any character that isn’t between the brackets.
 () in regex demarks the match groups for mo.group(), mo.group(0), mo.group(1)
+re.VERBOSE - ignores whitespace and comments to spread regex over multi lines
+regex.sub - substitute regex
+re.IGNORECASE, re.I - case insensitive
+re.DOTALL - matches even newlines
+(r'.at') matches all but newline

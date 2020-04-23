@@ -1,11 +1,8 @@
-# practice questions and example
-
-import pyperclip, re
-
 # practice problem 1
 # user copies text to clipboard, run program
 # clipboard replaced with just phone numbers and email addresses found
 
+import pyperclip, re
 # phone regex
 phoneRegex = re.compile(r'''(
     (\d{3}|\(\d{3}\))?                # optional area code
