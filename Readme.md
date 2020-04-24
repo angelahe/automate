@@ -176,3 +176,7 @@ inputPassword() Is like the built-in input(), but displays * characters as the u
     so that passwords, or other sensitive information, aren’t displayed on the screen
     
 args: min, max, lessThan, greaterThan, blank
+
+inputCustom(customFunctionOfMine) - accepts string arg from user, raises exception if fails validation
+    returns none if it should return it unchanged, non-None if returns different
+    
