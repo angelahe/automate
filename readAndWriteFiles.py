@@ -80,3 +80,25 @@ print(str(os.path.dirname(p)))
 
 print('getting a paths dir name and base name together')
 print(os.path.split(p))
+
+# split file path on mac/linux 1st one will be ''
+aFilePath = '/Users/angela/kata/2020code/automate/readAndWriteFiles.py'
+print('all parts of the path as strings')
+print(aFilePath.split(os.sep))
+# or
+listofparts = aFilePath.split(os.sep)
+print(listofparts)
+# find file sizes and folder contents
+print('size in bytes of file')
+print(os.path.getsize(aFilePath))
+
+aDirectoryPath = '/Users/angela/kata/2020code/automate'
+print('list all files in directory')
+print(*os.listdir(aDirectoryPath), sep = '\n')
+
+# find total size of all files in directory
+totalSize = 0
+for filename in os.listdir(aDirectoryPath):
+    totalSize = totalSize + os.path.getsize(os.path.join(aDirectoryPath, filename))
+print('total size of directory is ' +str(totalSize))
+

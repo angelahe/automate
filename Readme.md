@@ -113,6 +113,13 @@ git rm --cached filename
 useful links:
 https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 
+## cool list printing
+ print(*foundStrings, sep = ", ")
+ or could print with newline:
+ print(*foundStrings, sep = "\n")
+ or can use map to convert item to string and then join them
+ print(' '.join(map(str, foundStrings)))
+
 ## Regex summary:
 \d - 0-9
 \D - not 0-9
