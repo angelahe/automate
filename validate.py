@@ -106,4 +106,3 @@ while True:
         break
 print('Gracias.  Qué tengas un buen día.')
 
-# multiplication quiz
