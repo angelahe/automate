@@ -13,3 +13,4 @@ build/
 
 # test files
 *.csv
+working/*

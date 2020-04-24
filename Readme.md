@@ -180,3 +180,7 @@ args: min, max, lessThan, greaterThan, blank
 inputCustom(customFunctionOfMine) - accepts string arg from user, raises exception if fails validation
     returns none if it should return it unchanged, non-None if returns different
     
+## reading and writing files
+ https://docs.python.org/3/library/os.path.html#os.path.join
+ 
+ 
