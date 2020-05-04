@@ -38,3 +38,8 @@ name = 'Angela'
 place = 'Bob\'s'
 time = '6pm'
 print('Hello %s, you are invited to a party at %s at %s' % (name, place, time))
+
+string = "/foo13546897/bar/Atlantis-GPS-coordinates/bar457822368/foo/"
+start = string.find('/bar/') + 5
+end = string.find('/', start)
+output = string[start:end]
