@@ -102,3 +102,28 @@ for filename in os.listdir(aDirectoryPath):
     totalSize = totalSize + os.path.getsize(os.path.join(aDirectoryPath, filename))
 print('total size of directory is ' +str(totalSize))
 
+# mod a list of files using glob patterns (better than listdir)
+# simplified form of regex
+b_path = Path('/Users/angela/kata/2020code/automate')
+print(b_path.glob('*'))
+print("prints list of all files")
+print(list(b_path.glob('*')))
+print('prints list of txt files')
+print(list(b_path.glob('*.txt')))
+print('? can be for one character')
+print(list(b_path.glob('*?s.txt')))
+
+# iterate over generator that glob returns
+for textFilePathObj in b_path.glob('*.py'):
+    print(textFilePathObj) #print path as string
+    #can di sinething with the text file...
+
+# operation on every file in directory, either:
+# os.listdir(p)
+# or
+# p.glob('*'
+
+# check path validity
+# p.exists() True if path exists or False if not
+# p.is_file() True if path exists and is a file, False otherwise
+# p.is_dir() True if path exists and is a directory, False otherwise

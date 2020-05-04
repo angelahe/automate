@@ -152,7 +152,7 @@ regex.sub - substitute regex
 re.IGNORECASE, re.I - case insensitive
 re.DOTALL - matches even newlines
 (r'.at') matches all but newline
-
+(\btotal\b)(?!.*\1)  negative lookup of previous group ie last group not occur earlier
 ## pyinputplus library:
 https://pyinputplus.readthedocs.io/.
 help(pyip.inputChoice)
