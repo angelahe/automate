@@ -127,3 +127,22 @@ for textFilePathObj in b_path.glob('*.py'):
 # p.exists() True if path exists or False if not
 # p.is_file() True if path exists and is a file, False otherwise
 # p.is_dir() True if path exists and is a directory, False otherwise
+dirPath = Path('/Users/angela/kata')
+thisFilePath = Path('/Users/angela/kata/2020code/automate/readAndWriteFiles.py')
+notExistsDir = Path('/Users/folder/does/not/exist')
+print('path exists')
+print(dirPath.exists())
+print('is a directory ')
+print(dirPath.is_dir())
+print('this directory does not exist')
+print(notExistsDir.exists())
+print('this is a file')
+print(thisFilePath.is_file())
+print('this is not a file')
+print(dirPath.is_file())
+print('this is not a directory')
+print(thisFilePath.is_dir())
+# and older library has os.path.isfile(path),
+# os.path.isdir(path)
+
+# file reading and writing
