@@ -18,3 +18,5 @@ working/*
 
 # test files to ignore
 tests/bacon.txt
+quiz/*
+quiz
