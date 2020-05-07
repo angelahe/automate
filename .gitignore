@@ -14,3 +14,7 @@ build/
 # test files
 *.csv
 working/*
+.~lock*
+
+# test files to ignore
+tests/bacon.txt
