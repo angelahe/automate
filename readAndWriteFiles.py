@@ -146,3 +146,8 @@ print(thisFilePath.is_dir())
 # os.path.isdir(path)
 
 # file reading and writing
+newFilePath = Path('/Users/angela/kata/2020code/automate/tests/spam.txt')
+newFilePath.write_text('Hello my darling')
+print('wrote Hello my darling to spam.txt')
+print(p.read_text())
+
