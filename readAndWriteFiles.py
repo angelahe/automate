@@ -127,7 +127,7 @@ for textFilePathObj in b_path.glob('*.py'):
 # p.exists() True if path exists or False if not
 # p.is_file() True if path exists and is a file, False otherwise
 # p.is_dir() True if path exists and is a directory, False otherwise
-dirPath = Path('/Users/angela/kata')
+dirPath = Path('/Users/angela/kata/2020code/automate/tests')
 thisFilePath = Path('/Users/angela/kata/2020code/automate/readAndWriteFiles.py')
 notExistsDir = Path('/Users/folder/does/not/exist')
 print('path exists')
@@ -151,3 +151,26 @@ newFilePath.write_text('Hello my darling')
 print('wrote Hello my darling to spam.txt')
 print(p.read_text())
 
+# more common way is to use open, read and write with file objects
+helloFile = open(dirPath / 'hello.txt')
+# or helloFile = open('/Users/angela/kata/2020code/automate/tests/hello.txt')
+helloContent = helloFile.read()
+print('hello content is :')
+print(helloContent)
+
+sonnetFile = open(dirPath / 'sonnet29.txt')
+print('reading sonnet file into lines: ')
+print(sonnetFile.readlines())
+
+print('writing to bacon file')
+baconFile = open(dirPath / 'bacon.txt', 'w')
+baconFile.write('bacon is the best\n')
+baconFile.close()
+baconFile = open(dirPath / 'bacon.txt', 'a')
+baconFile.write('bacon is most definitely not a vegetable.')
+baconFile.close()
+baconFile = open(dirPath / 'bacon.txt')
+baconContent = baconFile.read()
+baconFile.close()
+print('content of baconfile')
+print(baconContent)
