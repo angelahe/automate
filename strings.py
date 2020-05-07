@@ -43,3 +43,18 @@ string = "/foo13546897/bar/Atlantis-GPS-coordinates/bar457822368/foo/"
 start = string.find('/bar/') + 5
 end = string.find('/', start)
 output = string[start:end]
+
+# 5 ways to print strings
+
+a=1
+b='ball'
+
+print('I have %d %s' %(a,b))
+
+print('I have',a,b)
+
+print('I have {} {}'.format(a,b))
+
+print('I have ' + str(a) +' ' +b)
+
+print( f'I have {a} {b}')
