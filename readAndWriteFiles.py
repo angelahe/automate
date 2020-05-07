@@ -2,6 +2,9 @@
 
 from pathlib import Path
 import os
+import shelve
+import pprint
+from tests import myCats
 
 #OS agnostic path - either WindowPath or PosixPath object
 print(str(Path('spam', 'bacon', 'eggs')))
@@ -174,3 +177,34 @@ baconContent = baconFile.read()
 baconFile.close()
 print('content of baconfile')
 print(baconContent)
+
+# saving variables with shelve module
+shelfFile = shelve.open('/Users/angela/kata/2020code/automate/tests/mydata')
+cats = ['Zophie', 'Pooka', 'Simon']
+shelfFile['cats'] = cats
+shelfFile.close()
+
+# can make changes to shelf value as if were a dictionary
+shelfFile = shelve.open('/Users/angela/kata/2020code/automate/tests/mydata')
+print('values in the shelf file cats dictionary')
+print(shelfFile['cats'])
+print('keys are:')
+print(list(shelfFile.keys()))
+print('values are:')
+print(list(shelfFile.values()))
+shelfFile.close()
+
+# pretty print
+# pprint.pprint() and pprint.pformat()
+
+cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}]
+pprint.pformat(cats)
+# should print: "[{'desc': 'chubby', 'name': 'Zophie'}, {'desc': 'fluffy', 'name': 'Pooka'}]"
+fileObj = open('/Users/angela/kata/2020code/automate/tests/myCats.py', 'w')
+fileObj.write('cats = ' + pprint.pformat(cats) + '\n')
+fileObj.close()
+
+# importing the dictionary from myCats.py
+print(myCats.cats)
+print(myCats.cats[0])
+print(myCats.cats[0]['name'])
