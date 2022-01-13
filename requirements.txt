@@ -10,7 +10,7 @@ pyzmail36==1.0.4
 twilio
 ezgmail
 ezsheets
-pillow==6.0.0
+pillow==9.0.0
 pyobjc-framework-Quartz==5.2
 pyobjc-core==5.2
 pyobjc==5.2
